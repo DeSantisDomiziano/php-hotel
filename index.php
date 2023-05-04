@@ -37,7 +37,10 @@
         ],
     ];
 
-
+    foreach ($hotels as $key => $hotel) {
+        /* var_dump($key); */
+        var_dump($hotel);
+    };
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +69,7 @@
                     <tr>
                     <?php foreach($hotel as $key => $value) : ?>
                         <td>
-                            <?php echo (('distance_to_center' === $key) ? $hotel['distance_to_center'] .= ' km' : $value) ?>    
+                            <?php echo (('distance_to_center' === $key) ? $hotel['distance_to_center'] .= ' km' : (('parking' !== $key) ? $value : (($hotel['parking']) ? 'Yes' : 'No') )) ?>    
                         </td>
                     <?php endforeach; ?>
                     </tr>
