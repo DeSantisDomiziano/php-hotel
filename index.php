@@ -36,11 +36,6 @@
             'distance_to_center' => 50
         ],
     ];
-
-    foreach ($hotels as $key => $hotel) {
-        /* var_dump($key); */
-        var_dump($hotel);
-    };
 ?>
 
 <!DOCTYPE html>
