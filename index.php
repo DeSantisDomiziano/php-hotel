@@ -36,6 +36,8 @@
             'distance_to_center' => 50
         ],
     ];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +66,7 @@
                     <tr>
                     <?php foreach($hotel as $key => $value) : ?>
                         <td>
-                            <?php echo $value ?>
+                            <?php echo (('distance_to_center' === $key) ? $hotel['distance_to_center'] .= ' km' : $value) ?>    
                         </td>
                     <?php endforeach; ?>
                     </tr>
